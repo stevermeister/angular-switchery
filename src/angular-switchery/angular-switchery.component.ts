@@ -41,8 +41,8 @@ export class AngularSwitcheryComponent implements ControlValueAccessor {
     }
   }
 
-  private onTouchedCallback = (v: any) => { }
-  private onChangeCallback = (v: any) => { }
+  private onTouchedCallback = (checked: true) => {}
+  private onChangeCallback = (checked: true) => {}
 
   public isDisabled() {
     return this._disabled;
@@ -52,12 +52,12 @@ export class AngularSwitcheryComponent implements ControlValueAccessor {
     this.checked = !!checked;
   }
 
-  public registerOnChange(fn: any) {
+  public registerOnChange(fn: () => void) {
     this.onChangeCallback = fn;
   }
 
 
-  public registerOnTouched(fn: any) {
+  public registerOnTouched(fn: () => void) {
     this.onTouchedCallback = fn;
   }
 
