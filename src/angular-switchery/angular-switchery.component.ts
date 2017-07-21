@@ -1,18 +1,16 @@
 import { Component, forwardRef, EventEmitter, Output, Input } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
-const ANGULAR_SWITCHERY_CONTROL_VALUE_ACCESSOR: any = {
-  provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => AngularSwitcheryComponent),
-  multi: true
-};
-
 @Component({
   selector: 'angular-switchery',
   styleUrls: ['./angular-switchery.component.scss'],
   template: `<span (keydown)="onKeyDown($event)" tabindex="0" [class]="className" (click)="onClick()" [class.disabled]="isDisabled()">
   <small [ngClass]="{'checked': checked}"></small></span>`,
-  providers: [ANGULAR_SWITCHERY_CONTROL_VALUE_ACCESSOR]
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => AngularSwitcheryComponent),
+    multi: true
+  }]
 })
 export class AngularSwitcheryComponent implements ControlValueAccessor {
   private _disabled: boolean;
@@ -30,15 +28,15 @@ export class AngularSwitcheryComponent implements ControlValueAccessor {
 
   onKeyDown(event: KeyboardEvent) {
     //"ArrowRight"
-    if(event.keyCode === 39) {
+    if (event.keyCode === 39) {
       this.checked = true;
     }
     //"ArrowLeft"
-    if(event.keyCode === 37) {
+    if (event.keyCode === 37) {
       this.checked = false;
     }
     //"space"
-    if(event.keyCode === 32) {
+    if (event.keyCode === 32) {
       this.checked = !this.checked;
     }
   }
@@ -50,10 +48,8 @@ export class AngularSwitcheryComponent implements ControlValueAccessor {
     return this._disabled;
   }
 
-  public writeValue(obj: any): void {
-    if (obj !== this.checked) {
-      this.checked = !!obj;
-    }
+  public writeValue(checked: boolean): void {
+    this.checked = !!checked;
   }
 
   public registerOnChange(fn: any) {
