@@ -76,7 +76,7 @@
   },
   "module": "./angular-switchery.es5.js",
   "es2015": "./angular-switchery.js",
-  "types": "./index.d.ts",
+  "typings": "./angular-switchery.d.ts",
   "dependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
