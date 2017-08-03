@@ -39,10 +39,12 @@ export class AngularSwitcheryComponent implements ControlValueAccessor {
     if (event.keyCode === 32) {
       this.checked = !this.checked;
     }
+    this.onChangeCallback(this.checked);
+    this.onTouchedCallback(this.checked);
   }
 
-  private onTouchedCallback = (checked: true) => {}
-  private onChangeCallback = (checked: true) => {}
+  private onTouchedCallback = (checked: boolean) => {}
+  private onChangeCallback = (checked: boolean) => {}
 
   public isDisabled() {
     return this._disabled;
@@ -50,6 +52,8 @@ export class AngularSwitcheryComponent implements ControlValueAccessor {
 
   public writeValue(checked: boolean): void {
     this.checked = !!checked;
+    this.onChangeCallback(this.checked);
+    this.onTouchedCallback(this.checked);
   }
 
   public registerOnChange(fn: () => void) {
