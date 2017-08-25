@@ -57,13 +57,19 @@ Only thing you need is to add a `checked` attribute to your checkbox input. Simp
 <angular-switchery disabled="disabled"></angular-switchery>
 ```
 
+##### NgModel
 
-## Development
-
-If you've decided to go in development mode and tweak all of this a bit, there are few things you should do.
-
-After you clone the repository, do this in your terminal ([NPM](http://npmjs.org/) required):
-
-```shell
-$ npm install
+```html
+ <angular-switchery [(ngModel)]="swticherModel"></angular-switchery>
+ <angular-switchery [(ngModel)]="swticherModel"></angular-switchery>
+ Switcher: {{swticherModel? 'ON' : 'OFF'}}
 ```
+
+##### Reactive approach
+
+```html
+<angular-switchery #f="ngForm" [formControl]="switcheryControl"></angular-switchery>
+switcheryControl.value : {{f.value}}
+```
+
+You can play with all the examples [here](https://stackblitz.com/edit/angular-fcr9gv)
