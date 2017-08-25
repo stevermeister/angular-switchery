@@ -1,6 +1,6 @@
 {
   "name": "angular-switchery",
-  "version": "0.3.0",
+  "version": "0.7.1",
   "description": "Angular Switchery, an Angular library",
   "main": "./bundles/angular-switchery.umd.js",
   "scripts": {
