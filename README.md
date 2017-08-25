@@ -12,7 +12,7 @@ Angular-Switchery is a simple component that helps you turn your default HTML ch
 
 Supported by all modern browsers: Chrome, Firefox, Opera, Safari, IE9+
 
-![Preview](http://i.imgur.com/0PcuTbO.jpg)
+![screen shot 2017-08-25 at 15 15 15](https://user-images.githubusercontent.com/1526680/29715591-4ed60646-89a8-11e7-8d6b-2712e6dd4e85.png)
 
 ## Installation
 
