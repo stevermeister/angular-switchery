@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { ExampleComponent } from './example.component';
 import { AngularSwitcheryModule } from '../index';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -10,7 +11,9 @@ import { AngularSwitcheryModule } from '../index';
     ],
     imports: [
         BrowserModule,
-        AngularSwitcheryModule
+        AngularSwitcheryModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
     providers: [],
     bootstrap: [ExampleComponent]
