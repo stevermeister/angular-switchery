@@ -32,13 +32,12 @@ import {AngularSwitcheryModule} from 'angular-switchery'
 ## Import module dependency:
 
 ```js
-   ...
-   imports: [
-   ...
-    AngularSwitcheryModule
-   ...
-   ]
-   ```
+...
+imports: [
+...
+ AngularSwitcheryModule
+...
+]
 ```
 
 ## Examples
