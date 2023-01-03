@@ -3,8 +3,9 @@
 ![angular-switchery](https://user-images.githubusercontent.com/1526680/28157705-9b59934c-67b7-11e7-95f7-6d655ae5d714.png)
 
 Angular (2+) Implementation of [switchery](https://github.com/abpetkov/switchery) form control
+Works with Angular 15
 
-[Demo](https://stackblitz.com/edit/angular-fcr9gv)
+[Demo](https://stackblitz.com/edit/angular-switchery-sandbox)
 
 ## Description
 

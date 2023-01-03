@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "package": "ng build angular-switchery && cp ./README.md ./dist/angular-switchery && cd dist/angular-switchery && npm pack"
   },
   "private": true,
   "dependencies": {
